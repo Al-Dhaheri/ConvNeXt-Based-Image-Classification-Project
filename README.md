@@ -24,7 +24,7 @@ The dataset contains images categorized into six classes of defects:
 - **Rolled**
 - **Scratches**
 
-To use this project, create a folder named `custom_dateset` in the main directory and add the following subfolders: `train/` and `test/`, each containing subfolders named after the defect classes (`Crazing`, `Inclusion`, etc.) with corresponding images. The dataset structure should be as follows:
+To use this project, you need to create a folder named `custom_dateset` in the main directory and add the following subfolders: `train/` and `test/`, each containing subfolders named after the defect classes (`Crazing`, `Inclusion`, etc.) with corresponding images. The dataset structure should be as follows:
 
 ```
 custom_dateset/
@@ -43,6 +43,8 @@ custom_dateset/
         ├── Rolled/
         └── Scratches/
 ```
+
+Since GitHub doesn't support uploading folders directly, you'll need to create this folder structure locally and populate it with your dataset images before running the project.
 
 The dataset must be uploaded to your Google Drive if you use Google Colab, and paths must be set accordingly.
 
@@ -94,11 +96,11 @@ These results demonstrate the model's effectiveness in correctly identifying dif
 ### Upload the Dataset
 
 - Create a `custom_dateset` folder in the root directory.
-- Upload your images following the folder structure mentioned above.
+- Add your images following the folder structure mentioned above.
 
 ### Train the Model
 
-If using Google Colab, ensure the dataset is properly mounted from Google Drive and run the notebook or script to start training the model.
+If using Google Colab, ensure the dataset is properly mounted from Google Drive and run the notebook (`ConvNeXtModel.ipynb`) to start training the model.
 
 ## Project Structure
 
