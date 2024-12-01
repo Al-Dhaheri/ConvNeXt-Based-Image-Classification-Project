@@ -24,7 +24,7 @@ The dataset contains images categorized into six classes of defects:
 - **Rolled**
 - **Scratches**
 
-To use this project, you need to create a folder named `custom_dateset` in the main directory and add the following subfolders: `train/` and `test/`, each containing subfolders named after the defect classes (`Crazing`, `Inclusion`, etc.) with corresponding images. The dataset structure should be as follows:
+To use this project, create a folder named `custom_dateset` in the main directory and add the following subfolders: `train/` and `test/`, each containing subfolders named after the defect classes (`Crazing`, `Inclusion`, etc.) with corresponding images. The dataset structure should be as follows:
 
 ```
 custom_dateset/
@@ -43,8 +43,6 @@ custom_dateset/
         ├── Rolled/
         └── Scratches/
 ```
-
-Since GitHub doesn't support uploading folders directly, you'll need to create this folder structure locally and populate it with your dataset images before running the project.
 
 The dataset must be uploaded to your Google Drive if you use Google Colab, and paths must be set accordingly.
 
@@ -84,6 +82,19 @@ The ConvNeXt model, after training on the custom dataset, achieved the following
 
 These results demonstrate the model's effectiveness in correctly identifying different defect classes with high confidence and minimal error.
 
+## Result Visualization
+
+The model's performance was visualized using several methods to better understand the classification capabilities:
+
+- **Training and Validation Loss Graph**: A graph showing the decreasing trend in both training and validation loss over the epochs, indicating effective learning and minimal overfitting.
+ ![Loss](https://github.com/user-attachments/assets/59cafe52-47cd-4f62-ad4e-43ab75b54648)
+- **Confusion Matrix**: A visual representation of model predictions versus actual labels. The matrix showed very few misclassifications, with the majority of predictions lying on the diagonal, indicating high accuracy.
+ ![matrix](https://github.com/user-attachments/assets/19ec9c9f-a33b-486b-be1a-7360a3aaf549)
+- **ROC Curves**: The ROC curves for each defect class displayed near-perfect performance, with all classes having an area under the curve (AUC) close to 1.00, which reflects a strong model with excellent discrimination capability.
+ ![Roc](https://github.com/user-attachments/assets/7a72e6e6-a697-443d-8351-476053d9393b)
+
+These visualizations can be found within the notebook or script output and provide clear insights into the reliability and robustness of the ConvNeXt model on this dataset.
+
 ## Usage Instructions
 
 ### Prerequisites
@@ -96,11 +107,11 @@ These results demonstrate the model's effectiveness in correctly identifying dif
 ### Upload the Dataset
 
 - Create a `custom_dateset` folder in the root directory.
-- Add your images following the folder structure mentioned above.
+- Upload your images following the folder structure mentioned above.
 
 ### Train the Model
 
-If using Google Colab, ensure the dataset is properly mounted from Google Drive and run the notebook (`ConvNeXtModel.ipynb`) to start training the model.
+If using Google Colab, ensure the dataset is properly mounted from Google Drive and run the notebook or script to start training the model.
 
 ## Project Structure
 
